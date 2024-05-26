@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Ustawienie targetu ES5 dla szerokiej kompatybilności przeglądarek
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Biblioteki włączenia do kompilacji
+    "allowJs": true, // Pozwolenie na import plików JS
+    "skipLibCheck": true, // Pominięcie sprawdzania typów w plikach definicji (np. z node_modules)
+    "strict": true, // Włączenie wszystkich opcji strict TypeScript
+    "forceConsistentCasingInFileNames": true, // Wymuszenie spójności wielkości liter w nazwach plików
+    "noEmit": true, // Nie emitowanie wyjściowych plików JS, tylko sprawdzanie typów
+    "esModuleInterop": true, // Włączenie zgodności z modułami ES
+    "module": "esnext", // Ustawienie modułów jako ESNext dla kompatybilności z Next.js
+    "moduleResolution": "node", // Użycie rozwiązywania modułów Node.js
+    "resolveJsonModule": true, // Pozwolenie na import plików JSON
+    "isolatedModules": true, // Wymuszenie izolacji modułów (wymóg Next.js)
+    "jsx": "preserve", // Zachowanie JSX (przetwarzane przez Next.js Babel)
+    "incremental": true // Włączenie kompilacji przyrostowej
+    ,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ], // Pliki dołączenia do kompilacji
+  "exclude": [
+    "node_modules"
+  ] // Wykluczenie katalogu node_modules
+}
